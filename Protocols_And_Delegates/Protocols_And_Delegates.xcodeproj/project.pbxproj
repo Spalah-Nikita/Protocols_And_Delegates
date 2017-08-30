@@ -13,6 +13,9 @@
 		1A293ACC1F56F9E600255E66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A293ACB1F56F9E600255E66 /* Assets.xcassets */; };
 		1A293ACF1F56F9E600255E66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A293ACD1F56F9E600255E66 /* LaunchScreen.storyboard */; };
 		1A293AE01F56FAF100255E66 /* ClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A293ADD1F56FAF100255E66 /* ClientViewController.m */; };
+		1A293AE31F56FEDF00255E66 /* PaymentTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A293AE21F56FEDF00255E66 /* PaymentTypeViewController.m */; };
+		1A293AE61F57162100255E66 /* ClientContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A293AE51F57162100255E66 /* ClientContentView.m */; };
+		1A293AE91F57164500255E66 /* PaymentTypeContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A293AE81F57164500255E66 /* PaymentTypeContentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		1A293AD01F56F9E600255E66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A293ADC1F56FAF100255E66 /* ClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientViewController.h; sourceTree = "<group>"; };
 		1A293ADD1F56FAF100255E66 /* ClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientViewController.m; sourceTree = "<group>"; };
+		1A293AE11F56FEDF00255E66 /* PaymentTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentTypeViewController.h; sourceTree = "<group>"; };
+		1A293AE21F56FEDF00255E66 /* PaymentTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentTypeViewController.m; sourceTree = "<group>"; };
+		1A293AE41F57162100255E66 /* ClientContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientContentView.h; sourceTree = "<group>"; };
+		1A293AE51F57162100255E66 /* ClientContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientContentView.m; sourceTree = "<group>"; };
+		1A293AE71F57164500255E66 /* PaymentTypeContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentTypeContentView.h; sourceTree = "<group>"; };
+		1A293AE81F57164500255E66 /* PaymentTypeContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentTypeContentView.m; sourceTree = "<group>"; };
+		1A293AEA1F57175A00255E66 /* Protocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,7 @@
 		1A293AD91F56FAF100255E66 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				1A293AEA1F57175A00255E66 /* Protocols.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -101,6 +112,8 @@
 			children = (
 				1A293ADC1F56FAF100255E66 /* ClientViewController.h */,
 				1A293ADD1F56FAF100255E66 /* ClientViewController.m */,
+				1A293AE11F56FEDF00255E66 /* PaymentTypeViewController.h */,
+				1A293AE21F56FEDF00255E66 /* PaymentTypeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -115,6 +128,10 @@
 		1A293ADF1F56FAF100255E66 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A293AE41F57162100255E66 /* ClientContentView.h */,
+				1A293AE51F57162100255E66 /* ClientContentView.m */,
+				1A293AE71F57164500255E66 /* PaymentTypeContentView.h */,
+				1A293AE81F57164500255E66 /* PaymentTypeContentView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,9 +208,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A293AE61F57162100255E66 /* ClientContentView.m in Sources */,
 				1A293AC41F56F9E600255E66 /* AppDelegate.m in Sources */,
+				1A293AE31F56FEDF00255E66 /* PaymentTypeViewController.m in Sources */,
 				1A293AC11F56F9E600255E66 /* main.m in Sources */,
 				1A293AE01F56FAF100255E66 /* ClientViewController.m in Sources */,
+				1A293AE91F57164500255E66 /* PaymentTypeContentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

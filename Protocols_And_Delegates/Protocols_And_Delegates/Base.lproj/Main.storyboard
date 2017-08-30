@@ -20,11 +20,153 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaN-Kx-6XL" customClass="ClientContentView">
+                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Способ оплаты:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPn-rU-BO7">
+                                        <rect key="frame" x="15" y="318.5" width="130" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="XzD-xB-A3p"/>
+                                            <constraint firstAttribute="height" constant="30" id="fk5-nD-zBm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgS-OM-EQM">
+                                        <rect key="frame" x="15" y="617" width="345" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="SeP-tz-N3B"/>
+                                        </constraints>
+                                        <state key="normal" title="Выберать способ оплаты"/>
+                                        <connections>
+                                            <segue destination="Sev-Ww-zbq" kind="show" identifier="PaymentTypeSegue" id="5om-hs-mfU"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="не задано" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yt-QN-FDj">
+                                        <rect key="frame" x="155" y="318.5" width="205" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="QzT-Mb-27b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="7yt-QN-FDj" firstAttribute="leading" secondItem="BPn-rU-BO7" secondAttribute="trailing" constant="10" id="0em-Vq-LrO"/>
+                                    <constraint firstItem="LgS-OM-EQM" firstAttribute="leading" secondItem="FaN-Kx-6XL" secondAttribute="leading" constant="15" id="9Gp-Eu-cJ3"/>
+                                    <constraint firstItem="BPn-rU-BO7" firstAttribute="leading" secondItem="FaN-Kx-6XL" secondAttribute="leading" constant="15" id="ECg-oz-AJX"/>
+                                    <constraint firstItem="BPn-rU-BO7" firstAttribute="centerY" secondItem="FaN-Kx-6XL" secondAttribute="centerY" id="Ect-tm-gd7"/>
+                                    <constraint firstAttribute="bottom" secondItem="LgS-OM-EQM" secondAttribute="bottom" constant="20" id="ULM-kW-a6g"/>
+                                    <constraint firstAttribute="trailing" secondItem="LgS-OM-EQM" secondAttribute="trailing" constant="15" id="cuR-Ez-s6v"/>
+                                    <constraint firstAttribute="trailing" secondItem="7yt-QN-FDj" secondAttribute="trailing" constant="15" id="nwk-c7-1A6"/>
+                                    <constraint firstItem="7yt-QN-FDj" firstAttribute="centerY" secondItem="BPn-rU-BO7" secondAttribute="centerY" id="rac-Da-taW"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="paymentTypeLabel" destination="7yt-QN-FDj" id="Lin-I3-C1o"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FaN-Kx-6XL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="48A-N2-d01"/>
+                            <constraint firstItem="FaN-Kx-6XL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EyG-m7-TML"/>
+                            <constraint firstItem="FaN-Kx-6XL" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="Kbu-zK-oU7"/>
+                            <constraint firstItem="FaN-Kx-6XL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Wth-Eg-OOe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="FaN-Kx-6XL" id="BMZ-Ki-qyc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Payment Type View Controller-->
+        <scene sceneID="qzK-98-kyE">
+            <objects>
+                <viewController storyboardIdentifier="PaymentTypeViewController" id="Sev-Ww-zbq" customClass="PaymentTypeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fbj-Aj-P7d"/>
+                        <viewControllerLayoutGuide type="bottom" id="VBb-OB-Jox"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6xK-mU-yry">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4p7-9A-JAZ" customClass="PaymentTypeContentView">
+                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzO-fY-JTy">
+                                        <rect key="frame" x="15" y="200" width="345" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="SDP-mb-F9s"/>
+                                        </constraints>
+                                        <state key="normal" title="VISA"/>
+                                        <connections>
+                                            <action selector="buttonWasTapped:" destination="Sev-Ww-zbq" eventType="touchUpInside" id="Ps5-Wi-bw9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nUX-eD-6YO">
+                                        <rect key="frame" x="15" y="270" width="345" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="sGC-VO-NBa"/>
+                                        </constraints>
+                                        <state key="normal" title="MasterCard"/>
+                                        <connections>
+                                            <action selector="buttonWasTapped:" destination="Sev-Ww-zbq" eventType="touchUpInside" id="sdS-rg-uWJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rYp-ux-SK6">
+                                        <rect key="frame" x="15" y="340" width="345" height="30"/>
+                                        <state key="normal" title="PayPal"/>
+                                        <connections>
+                                            <action selector="buttonWasTapped:" destination="Sev-Ww-zbq" eventType="touchUpInside" id="X9n-aO-fFH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wN1-cS-DsO">
+                                        <rect key="frame" x="15" y="410" width="345" height="30"/>
+                                        <state key="normal" title="Web Money"/>
+                                        <connections>
+                                            <action selector="buttonWasTapped:" destination="Sev-Ww-zbq" eventType="touchUpInside" id="Fcp-7T-O50"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="TzO-fY-JTy" firstAttribute="top" secondItem="4p7-9A-JAZ" secondAttribute="top" constant="200" id="23n-TF-0Xe"/>
+                                    <constraint firstItem="nUX-eD-6YO" firstAttribute="height" secondItem="TzO-fY-JTy" secondAttribute="height" id="AJz-Iq-ECh"/>
+                                    <constraint firstItem="nUX-eD-6YO" firstAttribute="top" secondItem="TzO-fY-JTy" secondAttribute="bottom" constant="40" id="Ah7-Ef-AMa"/>
+                                    <constraint firstItem="wN1-cS-DsO" firstAttribute="width" secondItem="TzO-fY-JTy" secondAttribute="width" id="Cu2-8X-sFQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="TzO-fY-JTy" secondAttribute="trailing" constant="15" id="Ppz-yj-Zbt"/>
+                                    <constraint firstItem="rYp-ux-SK6" firstAttribute="height" secondItem="TzO-fY-JTy" secondAttribute="height" id="U8w-Ez-QHa"/>
+                                    <constraint firstItem="rYp-ux-SK6" firstAttribute="width" secondItem="TzO-fY-JTy" secondAttribute="width" id="aqf-sn-Y3b"/>
+                                    <constraint firstItem="nUX-eD-6YO" firstAttribute="centerX" secondItem="TzO-fY-JTy" secondAttribute="centerX" id="bc9-XV-0Be"/>
+                                    <constraint firstItem="wN1-cS-DsO" firstAttribute="centerX" secondItem="TzO-fY-JTy" secondAttribute="centerX" id="cQO-S8-UV3"/>
+                                    <constraint firstItem="rYp-ux-SK6" firstAttribute="top" secondItem="nUX-eD-6YO" secondAttribute="bottom" constant="40" id="cVn-0R-9LE"/>
+                                    <constraint firstItem="wN1-cS-DsO" firstAttribute="top" secondItem="rYp-ux-SK6" secondAttribute="bottom" constant="40" id="lkn-iU-JSU"/>
+                                    <constraint firstItem="nUX-eD-6YO" firstAttribute="width" secondItem="TzO-fY-JTy" secondAttribute="width" id="uEA-oG-aD6"/>
+                                    <constraint firstItem="rYp-ux-SK6" firstAttribute="centerX" secondItem="TzO-fY-JTy" secondAttribute="centerX" id="wJd-s1-I5y"/>
+                                    <constraint firstItem="TzO-fY-JTy" firstAttribute="leading" secondItem="4p7-9A-JAZ" secondAttribute="leading" constant="15" id="wwg-Ge-9fe"/>
+                                    <constraint firstItem="wN1-cS-DsO" firstAttribute="height" secondItem="TzO-fY-JTy" secondAttribute="height" id="xLp-4B-Zmn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4p7-9A-JAZ" firstAttribute="centerY" secondItem="6xK-mU-yry" secondAttribute="centerY" id="0b6-3L-Z7a"/>
+                            <constraint firstItem="4p7-9A-JAZ" firstAttribute="width" secondItem="6xK-mU-yry" secondAttribute="width" id="A2i-uc-cHm"/>
+                            <constraint firstItem="4p7-9A-JAZ" firstAttribute="height" secondItem="6xK-mU-yry" secondAttribute="height" id="FdS-fv-Wa8"/>
+                            <constraint firstItem="4p7-9A-JAZ" firstAttribute="centerX" secondItem="6xK-mU-yry" secondAttribute="centerX" id="K9c-wd-lFL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GTo-PK-7xk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="37"/>
         </scene>
     </scenes>
 </document>

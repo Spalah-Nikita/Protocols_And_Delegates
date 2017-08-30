@@ -7,8 +7,15 @@
 //
 
 #import "ClientViewController.h"
+#import "ClientContentView.h"
+#import "PaymentTypeViewController.h"
+#import "Protocols.h"
 
-@interface ClientViewController ()
+static NSString *const paymentSegueIdentifier = @"PaymentTypeSegue";
+
+@interface ClientViewController () <ChoosePaymentTypeProtocol>
+
+@property (weak, nonatomic) IBOutlet ClientContentView *contentView;
 
 @end
 
@@ -19,5 +26,24 @@
     [super viewDidLoad];
 }
 
+
+#pragma mark - Storyboard Actions
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:paymentSegueIdentifier])
+    {
+        PaymentTypeViewController *paymentVC = segue.destinationViewController;
+        paymentVC.delegate = self;
+    }
+}
+
+
+#pragma mark - Choose Payment Type Protocol Methods
+
+- (void)paymentTypeWasSelectedWithName:(NSString *)paymentName
+{
+    self.contentView.paymentTypeLabel.text = paymentName;
+}
 
 @end
