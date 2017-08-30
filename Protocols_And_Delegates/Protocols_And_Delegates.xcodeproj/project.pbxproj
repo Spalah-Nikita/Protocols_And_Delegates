@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A14EF651F5761ED0031A915 /* EnterNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14EF641F5761ED0031A915 /* EnterNameViewController.m */; };
+		1A14EF681F5762600031A915 /* FoodMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14EF671F5762600031A915 /* FoodMenuViewController.m */; };
 		1A293AC11F56F9E600255E66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A293AC01F56F9E600255E66 /* main.m */; };
 		1A293AC41F56F9E600255E66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A293AC31F56F9E600255E66 /* AppDelegate.m */; };
 		1A293ACA1F56F9E600255E66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A293AC81F56F9E600255E66 /* Main.storyboard */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A14EF631F5761ED0031A915 /* EnterNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterNameViewController.h; sourceTree = "<group>"; };
+		1A14EF641F5761ED0031A915 /* EnterNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterNameViewController.m; sourceTree = "<group>"; };
+		1A14EF661F5762600031A915 /* FoodMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodMenuViewController.h; sourceTree = "<group>"; };
+		1A14EF671F5762600031A915 /* FoodMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodMenuViewController.m; sourceTree = "<group>"; };
 		1A293ABC1F56F9E600255E66 /* Protocols_And_Delegates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Protocols_And_Delegates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A293AC01F56F9E600255E66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A293AC21F56F9E600255E66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +120,10 @@
 				1A293ADD1F56FAF100255E66 /* ClientViewController.m */,
 				1A293AE11F56FEDF00255E66 /* PaymentTypeViewController.h */,
 				1A293AE21F56FEDF00255E66 /* PaymentTypeViewController.m */,
+				1A14EF631F5761ED0031A915 /* EnterNameViewController.h */,
+				1A14EF641F5761ED0031A915 /* EnterNameViewController.m */,
+				1A14EF661F5762600031A915 /* FoodMenuViewController.h */,
+				1A14EF671F5762600031A915 /* FoodMenuViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +224,8 @@
 				1A293AC11F56F9E600255E66 /* main.m in Sources */,
 				1A293AE01F56FAF100255E66 /* ClientViewController.m in Sources */,
 				1A293AE91F57164500255E66 /* PaymentTypeContentView.m in Sources */,
+				1A14EF651F5761ED0031A915 /* EnterNameViewController.m in Sources */,
+				1A14EF681F5762600031A915 /* FoodMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +386,7 @@
 				1A293AD51F56F9E600255E66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

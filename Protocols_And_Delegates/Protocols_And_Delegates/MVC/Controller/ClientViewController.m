@@ -9,22 +9,21 @@
 #import "ClientViewController.h"
 #import "ClientContentView.h"
 #import "PaymentTypeViewController.h"
+#import "FoodMenuViewController.h"
+#import "EnterNameViewController.h"
 #import "Protocols.h"
 
 static NSString *const paymentSegueIdentifier = @"PaymentTypeSegue";
+static NSString *const menuSegueIdentifier = @"FoodMenuSegue";
+static NSString *const clientNameSegueIdentifier = @"EnterNameSegue";
 
-@interface ClientViewController () <ChoosePaymentTypeProtocol>
+@interface ClientViewController () <ChoosePaymentTypeProtocol, FoodMenuProtocol, EditNameProtocol>
 
 @property (weak, nonatomic) IBOutlet ClientContentView *contentView;
 
 @end
 
 @implementation ClientViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
 
 
 #pragma mark - Storyboard Actions
@@ -36,6 +35,16 @@ static NSString *const paymentSegueIdentifier = @"PaymentTypeSegue";
         PaymentTypeViewController *paymentVC = segue.destinationViewController;
         paymentVC.delegate = self;
     }
+    else if ([segue.identifier isEqualToString:menuSegueIdentifier])
+    {
+        FoodMenuViewController *menuVC = segue.destinationViewController;
+        menuVC.delegate = self;
+    }
+    else if ([segue.identifier isEqualToString:clientNameSegueIdentifier])
+    {
+        EnterNameViewController *nameVC = segue.destinationViewController;
+        nameVC.delegate = self;
+    }
 }
 
 
@@ -44,6 +53,22 @@ static NSString *const paymentSegueIdentifier = @"PaymentTypeSegue";
 - (void)paymentTypeWasSelectedWithName:(NSString *)paymentName
 {
     self.contentView.paymentTypeLabel.text = paymentName;
+}
+
+
+#pragma mark - Edit Name Protocol Methods
+
+- (void)nameWasChanged:(NSString *)clientName
+{
+    self.contentView.clientNameLabel.text = clientName;
+}
+
+
+#pragma mark - Food Menu Protocol Methods
+
+- (void)menuWasSelected:(NSString *)menuName
+{
+    self.contentView.menuLabel.text = menuName;
 }
 
 @end

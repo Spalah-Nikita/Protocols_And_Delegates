@@ -13,3 +13,17 @@
 - (void)paymentTypeWasSelectedWithName:(NSString*)paymentName;
 
 @end
+
+
+@protocol EditNameProtocol <NSObject>
+
+- (void)nameWasChanged:(NSString*)clientName;
+
+@end
+
+
+@protocol FoodMenuProtocol <NSObject>
+
+- (void)menuWasSelected:(NSString*)menuName;
+
+@end

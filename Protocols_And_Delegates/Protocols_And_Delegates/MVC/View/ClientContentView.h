@@ -11,5 +11,7 @@
 @interface ClientContentView : UIView
 
 @property (nonatomic, weak) IBOutlet UILabel *paymentTypeLabel;
+@property (nonatomic, weak) IBOutlet UILabel *clientNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *menuLabel;
 
 @end
